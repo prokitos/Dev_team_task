@@ -10,3 +10,7 @@ type Test_Conversion struct {
 	Amount          float64 `json:"amount" example:""`
 	Result_amount   float64 `json:"result_amount" example:""`
 }
+
+type MessageResult struct {
+	Conversion_rate float64 `json:"conversion_rate" example:""`
+}

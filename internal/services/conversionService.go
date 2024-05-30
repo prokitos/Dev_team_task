@@ -22,13 +22,11 @@ func ConversionStart(c *fiber.Ctx) error {
 	curOperation.Base_currency = c.Query("base_currency", "")
 	curOperation.Target_currency = c.Query("target_currency", "")
 
-	var rate float64 = 0.1
 	// обращение к внешнему API и получение коэфициента
-
+	var rate float64 = sendRequestToGet(curOperation.Base_currency, curOperation.Target_currency)
 	curOperation.Result_amount = curOperation.Amount * rate
 
 	// запись в бд
-	database.CreateData(c, &curOperation)
+	return database.CreateData(c, &curOperation)
 
-	return c.SendStatus(fiber.StatusAccepted)
 }
