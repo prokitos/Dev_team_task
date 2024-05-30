@@ -12,6 +12,7 @@ type ConnectConfig struct {
 	Host   string `yaml:"host"`
 	Name   string `yaml:"name"`
 	Reload bool   `yaml:"reload"`
+	Port   string `yaml:"port"`
 }
 
 type ServerConfig struct {

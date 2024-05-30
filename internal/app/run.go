@@ -3,6 +3,7 @@ package app
 import (
 	"fmt"
 	"module/internal/config"
+	"module/internal/database"
 	"module/internal/server"
 
 	log "github.com/sirupsen/logrus"
@@ -19,6 +20,8 @@ func RunApp() {
 	log.Info("the server is starting")
 
 	// миграция и подключение к бд. в горутине.
+	database.OpenConnection(cfg.Connect)
+	go database.StartMigration()
 
 	// запуск сервера.
 	server.ServerStart(cfg.Server)
