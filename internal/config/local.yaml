@@ -1,0 +1,9 @@
+env: "local"
+postgres:
+  user: "postgres"
+  pass: "root"
+  host: "localhost"
+  name: "postgres"
+  reload: false
+server:
+  port: ":8888"

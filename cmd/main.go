@@ -1,8 +1,6 @@
 package main
 
-import (
-	"module/internal/app"
-)
+import "module/internal/app"
 
 func main() {
 	app.RunApp()
