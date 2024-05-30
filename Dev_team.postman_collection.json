@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "9f99fa50-da4c-4452-b8dc-ba819174a2cc",
+		"name": "Dev_team",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35379590"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8888/convert?base_currency=RUB&target_currency=GBP",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/convert?base_currency=RUB&target_currency=GBP",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"convert"
+					],
+					"query": [
+						{
+							"key": "base_currency",
+							"value": "RUB"
+						},
+						{
+							"key": "target_currency",
+							"value": "GBP"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8888/convert?base_currency=RUB&target_currency=GBP",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"amount\": 500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/convert?base_currency=RUB&target_currency=GBP",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"convert"
+							],
+							"query": [
+								{
+									"key": "base_currency",
+									"value": "RUB"
+								},
+								{
+									"key": "target_currency",
+									"value": "GBP"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 30 May 2024 20:24:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"result\": 4.3945\n    },\n    \"status\": \"success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8888/convert?base_currency=USD&target_currency=EUR",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\": 122\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/convert?base_currency=USD&target_currency=EUR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"convert"
+					],
+					"query": [
+						{
+							"key": "base_currency",
+							"value": "USD"
+						},
+						{
+							"key": "target_currency",
+							"value": "EUR"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8888/convert?base_currency=USD&target_currency=EUR",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"amount\": 122\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/convert?base_currency=USD&target_currency=EUR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"convert"
+							],
+							"query": [
+								{
+									"key": "base_currency",
+									"value": "USD"
+								},
+								{
+									"key": "target_currency",
+									"value": "EUR"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 30 May 2024 20:23:07 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "47"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"result\": 112.7768\n    },\n    \"status\": \"success\"\n}"
+				}
+			]
+		}
+	]
+}
