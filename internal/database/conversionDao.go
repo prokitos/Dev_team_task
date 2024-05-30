@@ -16,5 +16,5 @@ func CreateData(c *fiber.Ctx, curConversion *models.Test_Conversion) error {
 	}
 
 	// отправить что всё хорошо
-	return c.Status(fiber.StatusCreated).JSON(fiber.Map{"status": "success", "data": fiber.Map{"note": curConversion}})
+	return c.Status(fiber.StatusCreated).JSON(fiber.Map{"status": "success", "data": fiber.Map{"result_amount": curConversion.Result_amount}})
 }
