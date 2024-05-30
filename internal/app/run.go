@@ -1,7 +1,6 @@
 package app
 
 import (
-	"fmt"
 	"module/internal/config"
 	"module/internal/database"
 	"module/internal/server"
@@ -13,7 +12,6 @@ func RunApp() {
 
 	// получение конфигов
 	cfg := config.ConfigMustLoad()
-	fmt.Println(cfg)
 
 	// установка логов. установка чтобы показывать логи debug уровня
 	log.SetLevel(log.DebugLevel)

@@ -2,15 +2,17 @@ package database
 
 import (
 	"fmt"
-	"log"
 	"module/internal/models"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
+
+	log "github.com/sirupsen/logrus"
 )
 
 var GlobalHandler *gorm.DB
 
+// открыть соединение, и поместить его в глобальную переменну.
 func OpenConnection(config models.ConnectConfig) {
 	connectStr := fmt.Sprintf("postgres://%s:%s@%s:%s/%s", config.User, config.Pass, config.Host, config.Port, config.Name)
 
@@ -22,6 +24,8 @@ func OpenConnection(config models.ConnectConfig) {
 	GlobalHandler = db
 }
 
+// миграция
 func StartMigration() {
 	GlobalHandler.AutoMigrate(models.Test_Conversion{})
+	log.Info("migration complete")
 }

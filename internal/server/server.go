@@ -3,7 +3,6 @@ package server
 import (
 	"log"
 	"module/internal/models"
-	"module/internal/services"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -19,6 +18,6 @@ func ServerStart(port models.ServerConfig) {
 
 func handlers(instance *fiber.App) {
 
-	instance.Post("/convert", services.Something)
+	instance.Post("/convert", routeConvert)
 
 }
